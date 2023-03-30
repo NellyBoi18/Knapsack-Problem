@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Takes the number of items, capacity, weights, and values and returns the maximum value 
+// Takes number of items, capacity, weights, and values and returns the maximum value 
 // that can be obtained from items whose combined weight is no more than the capacity
 int knapsack(int numItems, int capacity, int weights[], int values[]) {
     // Array of size capacity + 1 to store the maximum value for each capacity from 0 to capacity
