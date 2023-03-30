@@ -11,11 +11,13 @@ int knapsack(int numItems, int capacity, int weights[], int values[]) {
     for (int i = 0; i < numItems; i++) {
         for (int capacity = capacity; capacity >= weights[i]; capacity--) {
             int val = m[capacity - weights[i]] + values[i];
+
             if (val > m[capacity]) {
                 m[capacity] = val;
             }
         }
     }
+
     return m[capacity];
 }
 
@@ -35,6 +37,7 @@ int main() {
         }
 
         maxValue[i] = knapsack(numItems, capacity, weights, values);
+        
         free(weights);
         free(values);
     }
